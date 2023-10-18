@@ -21,6 +21,7 @@
       }
 
       h1 {
+        color: azure;
         margin-top: 20px;
         background-color: #8ec5fc;
         background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
@@ -30,12 +31,14 @@
       }
 
       textarea {
+        background-color: azure;
         width: 90vw;
         height: 40vh;
         font-size: 20px;
       }
 
       p {
+        color: rgb(255, 255, 255);
         margin: 10px 20px;
         font-size: 20px;
       }
@@ -61,8 +64,10 @@
         text = text.trim();
         let word = text.split(" ");
         console.log(word);
-
-        document.getElementById("word").innerHTML = word.length;
+        let cleanList = word.filter(function(elm){
+            return elm!="";
+        })
+        document.getElementById("word").innerHTML = cleanList.length;
       });
     </script>
   </body>
